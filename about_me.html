@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Yaryna's portfolio" />
+        <meta name="description" content="A portfolio showcasing my best works and achievements." />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Yaryna Skulska" />
+        <title>Yaryna's Portfolio</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="./img/icons/favicons/site.webmanifest" />
+        <script>
+            // Ініціалізація теми та мови перед завантаженням сторінки
+            (function () {
+                // Тема
+                const savedTheme = localStorage.getItem('darkMode');
+                if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+
+                // Мова
+                const savedLang = localStorage.getItem('language') || 'en';
+                document.documentElement.setAttribute('lang', savedLang);
+            })();
+        </script>
+
+        <style>
+            /* Приховуємо контент до повного завантаження */
+            body:not(.loaded) {
+                visibility: hidden;
+                opacity: 0;
+                overflow: hidden;
+            }
+        </style>
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="./js/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-row">
+                    <a href="./index.html" class="logo"><strong>My</strong> portfolio</a>
+                    <!-- Switch mode open -->
+                    <button class="dark-mode-btn">
+                        <img src="./img/icons/sun.svg" alt="light mode" class="dark-mode-btn__icon" />
+                        <img src="./img/icons/moon.svg" alt="dark mode" class="dark-mode-btn__icon" />
+                    </button>
+                    <!-- Translate button -->
+                    <button class="translate-btn">
+                        <img
+                            src="./img/icons/british.svg"
+                            alt="English"
+                            class="translate-btn__icon translate-btn__icon--active"
+                        />
+                        <img src="./img/icons/germanflag.svg" alt="Deutsch" class="translate-btn__icon" />
+                    </button>
+                    <!-- Nav links -->
+                    <ul class="nav-list">
+                        <li class="nav-list__item">
+                            <a href="./index.html" class="nav-list__link" data-i18n="home.projects">Projects</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a
+                                href="./about_me.html"
+                                class="nav-list__link nav-list__link--active"
+                                data-i18n="home.about"
+                                >About me</a
+                            >
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="./contacts.html" class="nav-list__link" data-i18n="home.contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-text">
+                        <h2 data-i18n="about.title">Hi There! 👋</h2>
+                        <p data-i18n="about.content"></p>
+                    </div>
+
+                    <div class="about-photo">
+                        <img src="./img/projects/IMG_9692.JPG" alt="My Photo" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="https://www.instagram.com/skulskayaryna/" target="_blank">
+                                <img src="./img/icons/instagram.svg" alt="instagram" />
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://github.com/Yarynka5" target="_blank"
+                                ><img src="./img/icons/gitHub.svg" alt="github"
+                            /></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.linkedin.com/in/yaryna-skulska-aab92b353/" target="_blank"
+                                ><img src="./img/icons/linkedIn.svg" alt="linkedin"
+                            /></a>
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        <p>
+                            &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            Yaryna Skulska. <span data-i18n="footer.copyright"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Yaryna's portfolio" />
+        <meta name="description" content="A portfolio showcasing my best works and achievements." />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Yaryna Skulska" />
+        <title>Yaryna's Portfolio</title>
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="./img/icons/favicons/site.webmanifest" />
+        <script>
+            // Ініціалізація теми та мови перед завантаженням сторінки
+            (function () {
+                // Тема
+                const savedTheme = localStorage.getItem('darkMode');
+                if (savedTheme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                }
+
+                // Мова
+                const savedLang = localStorage.getItem('language') || 'en';
+                document.documentElement.setAttribute('lang', savedLang);
+            })();
+        </script>
+
+        <style>
+            /* Приховуємо контент до повного завантаження */
+            body:not(.loaded) {
+                visibility: hidden;
+                opacity: 0;
+                overflow: hidden;
+            }
+        </style>
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="./js/main.js" defer></script>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-row">
+                    <a href="./index.html" class="logo"><strong>My</strong> portfolio</a>
+                    <!-- Switch mode open -->
+                    <button class="dark-mode-btn">
+                        <img src="./img/icons/sun.svg" alt="light mode" class="dark-mode-btn__icon" />
+                        <img src="./img/icons/moon.svg" alt="dark mode" class="dark-mode-btn__icon" />
+                    </button>
+                    <!-- Translate button -->
+                    <button class="translate-btn">
+                        <img
+                            src="./img/icons/british.svg"
+                            alt="English"
+                            class="translate-btn__icon translate-btn__icon--active"
+                        />
+                        <img src="./img/icons/germanflag.svg" alt="Deutsch" class="translate-btn__icon" />
+                    </button>
+                    <!-- Nav links -->
+                    <ul class="nav-list">
+                        <li class="nav-list__item">
+                            <a
+                                href="./index.html"
+                                class="nav-list__link nav-list__link--active"
+                                data-i18n="home.projects"
+                                >Projects</a
+                            >
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="./about_me.html" class="nav-list__link" data-i18n="home.about">About me</a>
+                        </li>
+                        <li class="nav-list__item">
+                            <a href="./contacts.html" class="nav-list__link" data-i18n="home.contacts">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <video src="./video/nature.mp4" type="video/mp4" autoplay muted loop></video>
+            <div class="effects"></div>
+            <div class="header__wrapper">
+                <h1 class="header__title">
+                    <strong>Hi, my name is <em>Yaryna</em></strong> <br />
+                    a
+                    <span class="profession-container">
+                        <span class="profession"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                </h1>
+                <div class="header__text" data-i18n="home.subtitle">with passion for learning and creating.</div>
+                <a href="./files/cv.pdf" class="btn" data-i18n="home.download" download>Download CV</a>
+                <div class="header__arrow">
+                    <a href="#sections">
+                        <img src="./img/icons/down-arrow-svgrepo-com.svg" alt="arrow" />
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <section id="sections" class="section">
+            <div class="container">
+                <h2 class="title-1" data-i18n="home.projects">Projects</h2>
+                <ul class="projects">
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/01.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Gaming streaming portal</h3>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/02.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Video service</h3>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/03.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Video portal</h3>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/04.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Dating app</h3>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/05.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Landing</h3>
+                        </a>
+                    </li>
+                    <li class="project">
+                        <a href="./project-page.html">
+                            <img src="./img/projects/06.jpg" alt="Project img" class="project__img" />
+                            <h3 class="project__title">Gaming community</h3>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="https://www.instagram.com/skulskayaryna/" target="_blank">
+                                <img src="./img/icons/instagram.svg" alt="instagram" />
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://github.com/Yarynka5" target="_blank"
+                                ><img src="./img/icons/gitHub.svg" alt="github"
+                            /></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="https://www.linkedin.com/in/yaryna-skulska-aab92b353/" target="_blank"
+                                ><img src="./img/icons/linkedIn.svg" alt="linkedin"
+                            /></a>
+                        </li>
+                    </ul>
+                    <div class="copyright">
+                        <p>
+                            &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            Yaryna Skulska. <span data-i18n="footer.copyright"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
