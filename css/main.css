@@ -805,7 +805,8 @@ html.dark .contacts-section .content-list__item {
     }
     
     .btn, .btn-outline {
-      font-size: 16px;
+      height: 42px;
+      font-size: 16px;     
       padding: 10px 20px;
     }
 
@@ -895,6 +896,10 @@ html.dark .contacts-section .content-list__item {
 
     .nav-list {
         column-gap: 20px;
+    }
+
+    .btn {
+        height: 36px;
     }
 
     .translate-btn {
