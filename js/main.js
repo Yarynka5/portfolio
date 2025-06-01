@@ -1,4 +1,4 @@
-// Ініціалізація теми та мови перед завантаженням сторінки
+// ==================== Ініціалізація теми та мови перед завантаженням сторінки ====================
 (function () {
     // Тема
     const savedTheme = localStorage.getItem('darkMode');
@@ -11,13 +11,11 @@
     document.documentElement.setAttribute('lang', savedLang);
 })();
 
-// Додаємо клас loaded до body після повної ініціалізації
+// ==================== Додаємо клас loaded до body після повної ініціалізації ====================
 function initializeApp() {
-    // Ініціалізація мови
     const savedLang = localStorage.getItem('language') || 'en';
     updateContent(savedLang);
 
-    // Ініціалізація кнопки перекладу
     const translateBtn = document.querySelector('.translate-btn');
     if (translateBtn) {
         const icons = translateBtn.querySelectorAll('.translate-btn__icon');
@@ -25,7 +23,6 @@ function initializeApp() {
         icons[1].classList.toggle('translate-btn__icon--active', savedLang === 'de');
     }
 
-    // Показуємо сторінку
     document.body.classList.add('loaded');
 }
 
@@ -34,13 +31,11 @@ window.addEventListener('load', initializeApp);
 // ==================== Темна тема ====================
 const btnDarkMode = document.querySelector(".dark-mode-btn");
 
-// 1. Перевірка теми на рівні системних налаштувань
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     btnDarkMode.classList.add('dark-mode-btn--active');
     document.documentElement.classList.add('dark');
 }
 
-// 2. Перевірка темної теми в LocalStorage
 if (localStorage.getItem('darkMode') === 'dark') {
     btnDarkMode.classList.add('dark-mode-btn--active');
     document.documentElement.classList.add('dark');
@@ -49,7 +44,6 @@ if (localStorage.getItem('darkMode') === 'dark') {
     document.documentElement.classList.remove('dark');
 }
 
-// 3. Якщо змінюються системні налаштування, змінюємо тему
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
     const newColorScheme = event.matches ? 'dark' : 'light';
 
@@ -64,7 +58,6 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (ev
     }
 });
 
-// 4. Включення темного режиму кнопкою
 btnDarkMode.onclick = function () {
     btnDarkMode.classList.toggle('dark-mode-btn--active');
     const isDark = document.documentElement.classList.toggle('dark');
@@ -120,7 +113,6 @@ function typeWriter() {
     setTimeout(typeWriter, typeSpeed);
 }
 
-// Ініціалізація анімації
 document.addEventListener('DOMContentLoaded', () => {
     const style = window.getComputedStyle(professionElement);
     document.documentElement.style.setProperty('--font-size', style.fontSize);
@@ -130,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ==================== Мовний перемикач ====================
+// ==================== Переклади ====================
 const translations = {
     en: {
         home: {
@@ -142,7 +134,9 @@ const translations = {
             download: "Download CV",
             profession1: "Web Designer",
             profession2: "UI/UX Designer",
-            profession3: "Frontend Dev"
+            profession3: "Frontend Dev",
+            comingSoon: "Coming Soon",
+            comingSoonText: "Exciting projects are currently in development. Stay tuned for updates as I prepare to showcase my latest work!"
         },
         about: {
             title: "Hi There! 👋",
@@ -168,7 +162,9 @@ const translations = {
             download: "Lebenslauf herunterladen",
             profession1: "Web Designer",
             profession2: "UI/UX Designer",
-            profession3: "Frontend Dev"
+            profession3: "Frontend Dev",
+            comingSoon: "Demnächst verfügbar",
+            comingSoonText: "Spannende Projekte sind in Entwicklung. Bleiben Sie dran für Updates, während ich meine neuesten Arbeiten vorbereite!"
         },
         about: {
             title: "Halli Hallo! 👋",
@@ -186,6 +182,7 @@ const translations = {
     }
 };
 
+// ==================== Мовний перемикач ====================
 const translateBtn = document.querySelector('.translate-btn');
 let currentLang = localStorage.getItem('language') || 'en';
 
@@ -200,7 +197,6 @@ function updateContent(lang) {
         }
     });
 
-    // Оновлення професій в анімації
     if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
         professions.length = 0;
         professions.push(
@@ -210,7 +206,6 @@ function updateContent(lang) {
         );
     }
 
-    // Оновлюємо атрибут мови для сторінки
     document.documentElement.setAttribute('lang', lang);
 }
 
@@ -220,16 +215,13 @@ if (translateBtn) {
         localStorage.setItem('language', currentLang);
         updateContent(currentLang);
 
-        // Перемикаємо іконки
         const icons = translateBtn.querySelectorAll('.translate-btn__icon');
         icons.forEach(icon => icon.classList.toggle('translate-btn__icon--active'));
     });
 
-    // Ініціалізація при завантаженні
     document.addEventListener('DOMContentLoaded', () => {
         updateContent(currentLang);
 
-        // Встановлюємо початкову активну іконку
         const icons = translateBtn.querySelectorAll('.translate-btn__icon');
         icons[0].classList.toggle('translate-btn__icon--active', currentLang === 'en');
         icons[1].classList.toggle('translate-btn__icon--active', currentLang === 'de');

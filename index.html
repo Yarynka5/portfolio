@@ -35,6 +35,82 @@
                 opacity: 0;
                 overflow: hidden;
             }
+
+            /* Coming Soon styles */
+            .coming-soon-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 50vh;
+                text-align: center;
+                padding: 2rem 0;
+            }
+
+            .coming-soon {
+                position: relative;
+                display: inline-block;
+            }
+
+            .coming-soon h2 {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: var(--text-color);
+                margin: 0;
+                position: relative;
+                padding-bottom: 1rem;
+            }
+
+            .coming-soon h2::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                bottom: 0;
+                left: 0;
+                background: var(--accent);
+                transform: scaleX(0);
+                transform-origin: right;
+                animation: underline 2.5s infinite ease-in-out;
+            }
+
+            .coming-soon p {
+                font-size: 1.2rem;
+                margin-top: 1.5rem;
+                color: var(--text-secondary);
+                max-width: 600px;
+                line-height: 1.6;
+            }
+
+            @keyframes underline {
+                0% {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+                50% {
+                    transform: scaleX(1);
+                    transform-origin: right;
+                }
+                51% {
+                    transform-origin: left;
+                }
+                100% {
+                    transform: scaleX(0);
+                    transform-origin: left;
+                }
+            }
+
+            .projects {
+                display: none;
+            }
+
+            @media (max-width: 768px) {
+                .coming-soon h2 {
+                    font-size: 2.5rem;
+                }
+                .coming-soon p {
+                    font-size: 1rem;
+                }
+            }
         </style>
         <link rel="stylesheet" href="./css/main.css" />
         <script src="./js/main.js" defer></script>
@@ -104,7 +180,16 @@
         <section id="sections" class="section">
             <div class="container">
                 <h2 class="title-1" data-i18n="home.projects">Projects</h2>
-                <ul class="projects">
+                <div class="coming-soon-container">
+                    <div class="coming-soon">
+                        <h2 data-i18n="home.comingSoon">Coming Soon</h2>
+                        <p data-i18n="home.comingSoonText">
+                            Exciting projects are currently in development. Stay tuned for updates as I prepare to
+                            showcase my latest work!
+                        </p>
+                    </div>
+                </div>
+                <!-- <ul class="projects">
                     <li class="project">
                         <a href="./project-page.html">
                             <img src="./img/projects/01.jpg" alt="Project img" class="project__img" />
@@ -141,7 +226,7 @@
                             <h3 class="project__title">Gaming community</h3>
                         </a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </section>
 
