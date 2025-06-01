@@ -146,7 +146,7 @@ const translations = {
         },
         about: {
             title: "Hi There! 👋",
-            content: `I am Yaryna Skulska and I am now 18 years old. I have been living in Hamburg, Germany, for three years, but I am originally from Ukraine. I can say that Germany has become a second home for me, where I have the opportunity to grow and find myself. To briefly introduce myself, I love singing, drawing, dancing, and reading. I am proficient with Adobe Photoshop, Adobe Illustrator, and Adobe InDesign. Overall, I love life, enjoy traveling, learning, meeting new people, spending time with family and friends, and am always excited to explore something new. You can learn more about my professional side by downloading my CV from the main page. I think that's all, thank you for stopping by! 😊😉`
+            content: `I am Yaryna Skulska and I am now 19 years old. I have been living in Hamburg, Germany, for three years, but I am originally from Ukraine. I can say that Germany has become a second home for me, where I have the opportunity to grow and find myself. To briefly introduce myself, I love singing, drawing, dancing, and reading. I am proficient with Adobe Photoshop, Adobe Illustrator, and Adobe InDesign. Overall, I love life, enjoy traveling, learning, meeting new people, spending time with family and friends, and am always excited to explore something new. You can learn more about my professional side by downloading my CV from the main page. I think that's all, thank you for stopping by! 😊😉`
         },
         contacts: {
             title: "Find me here",
@@ -172,7 +172,7 @@ const translations = {
         },
         about: {
             title: "Halli Hallo! 👋",
-            content: `Ich bin Yaryna Skulska und bin jetzt 18 Jahre alt. Seit 3 Jahren lebe ich in Hamburg, Deutschland, aber ursprünglich komme ich aus der Ukraine. Ich kann sagen, dass Deutschland für mich zu einer zweiten Heimat geworden ist, wo ich die Möglichkeit habe, mich weiterzuentwickeln und mich selbst zu finden. Kurz zu mir: Ich singe, zeichne, tanze und lese gerne. Ich bin gut mit Programmen wie Adobe Photoshop, Adobe Illustrator und Adobe InDesign vertraut. Generell liebe ich das Leben, reise gerne, treffe gerne Menschen, verbringe Zeit mit Familie und Freunden und bin immer begeistert, etwas Neues zu lernen. Die offizielle Seite von mir kannst Du erfahren, indem Du meinen Lebenslauf auf der Hauptseite herunterlädst. Ich denke, das war's, danke fürs Vorbeischauen! 😊😉`
+            content: `Ich bin Yaryna Skulska und bin jetzt 19 Jahre alt. Seit 3 Jahren lebe ich in Hamburg, Deutschland, aber ursprünglich komme ich aus der Ukraine. Ich kann sagen, dass Deutschland für mich zu einer zweiten Heimat geworden ist, wo ich die Möglichkeit habe, mich weiterzuentwickeln und mich selbst zu finden. Kurz zu mir: Ich singe, zeichne, tanze und lese gerne. Ich bin gut mit Programmen wie Adobe Photoshop, Adobe Illustrator und Adobe InDesign vertraut. Generell liebe ich das Leben, reise gerne, treffe gerne Menschen, verbringe Zeit mit Familie und Freunden und bin immer begeistert, etwas Neues zu lernen. Die offizielle Seite von mir kannst Du erfahren, indem Du meinen Lebenslauf auf der Hauptseite herunterlädst. Ich denke, das war's, danke fürs Vorbeischauen! 😊😉`
         },
         contacts: {
             title: "Finde mich hier",
