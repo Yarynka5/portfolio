@@ -140,7 +140,7 @@ const translations = {
         },
         about: {
             title: "Hi There! 👋",
-            content: `I am Yaryna Skulska and I am now 19 years old. I have been living in Hamburg, Germany, for three years, but I am originally from Ukraine. I can say that Germany has become a second home for me, where I have the opportunity to grow and find myself. To briefly introduce myself, I love singing, drawing, dancing, and reading. I am proficient with Adobe Photoshop, Adobe Illustrator, and Adobe InDesign. Overall, I love life, enjoy traveling, learning, meeting new people, spending time with family and friends, and am always excited to explore something new. You can learn more about my professional side by downloading my CV from the main page. I think that's all, thank you for stopping by! 😊😉`
+            content: `I am Yaryna Skulska and I am now 19 years old. I have been living in Hamburg, Germany, for 3 years, but I am originally from Ukraine. I can say that Germany has become a second home for me, where I have the opportunity to grow and find myself. To briefly introduce myself, I love singing, drawing, dancing, and reading. I am proficient with Adobe Photoshop, Adobe Illustrator, and Adobe InDesign. Overall, I love life, enjoy traveling, learning, meeting new people, spending time with family and friends, and am always excited to explore something new. You can learn more about my professional side by downloading my CV from the main page. I think that's all, thank you for stopping by! 😊😉`
         },
         contacts: {
             title: "Find me here",
